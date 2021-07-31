@@ -1,15 +1,17 @@
 $(function () {
   $(".add-to-favorite").submit(function (e) {
     const btn = this.querySelector('button');
-    const actionInput = this.querySelector('#action');
+    const actionInput = this.querySelector('.action');
     e.preventDefault();
+    const form = $(this);
 
     $.ajax({
         url: "/ajax/favorites.php",
         type: "post",
-        data: $(".add-to-favorite").serialize(),
+        data: form.serialize(),
         dataType: "json",
         success: function () {
+          console.log(form.serialize());
           btn.classList.toggle('btn-primary');
           btn.classList.toggle('btn-danger');
           if (actionInput.value === 'remove') {

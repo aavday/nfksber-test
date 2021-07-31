@@ -23,7 +23,7 @@
                             </a>
                             <form method="post" class="add-to-favorite">
                                 <button class="btn btn-danger">Удалить из избранного</button>
-                                <input type="hidden" name="action" id="action" value="remove">
+                                <input type="hidden" name="action" class="action" value="remove">
                                 <input type="hidden" value="<?=$USER->GetID()?>" name="user-id" id="user-id">
                                 <input type="hidden" value="<?=$arItem['ID']?>" name="post-id" id="post-id">
                             </form>
