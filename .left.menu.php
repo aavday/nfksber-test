@@ -6,6 +6,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Избранные записи", 
+		"/favorite_posts/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
