@@ -12,6 +12,8 @@ $theme = COption::GetOptionString("main", "wizard_eshop_bootstrap_theme_id", "gr
 
 $curPage = $APPLICATION->GetCurPage(true);
 
+use Bitrix\Main\Page\Asset;
+
 ?><!DOCTYPE html>
 <html xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>">
 <head>
@@ -20,6 +22,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_DIR?>favicon.ico" />
 	<? $APPLICATION->ShowHead(); ?>
+	<? Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/template.js") ?>
 </head>
 <body class="bx-background-image bx-theme-<?=$theme?>" <?$APPLICATION->ShowProperty("backgroundImage");?>>
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
