@@ -5,11 +5,11 @@ global $USER;
 ?>
 <div class="blog-detail">
     <div class="blog-detail-img">
-        <img src="<?=CFile::GetPath($arResult['PREVIEW_PICTURE']['ID'])?>" alt="img">
+        <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="img">
     </div>
     <div class="blog-info">
         <span><?=$arResult['PREVIEW_TEXT'] ?></span>
-        <span class="blog-post-date"><?=$arResult['ACTIVE_FROM_FORMATTED'] ?></span>
+        <span class="blog-post-date"><?=$arResult['DISPLAY_ACTIVE_FROM'] ?></span>
     </div>
     <div class="blog-detail-text">
         <p><?=$arResult['DETAIL_TEXT'] ?></p>

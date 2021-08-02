@@ -24,6 +24,4 @@
     {
         $arResult['IS_IN_FAVORITES'] = false;
     }
-
-    $arResult["ACTIVE_FROM_FORMATTED"] = strtolower(FormatDate("d F Y", MakeTimeStamp($arResult['ACTIVE_FROM'])));
 endif?>
